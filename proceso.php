@@ -15,6 +15,6 @@ if(isset($_POST['txtusr']) && isset($_POST['txtpwd'])){
 		}
     }
 	else{
-			echo "El usuario ".$_POST['txtusr']. " es incorrecto ".$contasena;
+			echo "El usuario ".$_POST['txtusr']. " es incorrecto ";
 	}
 }
