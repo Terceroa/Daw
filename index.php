@@ -25,7 +25,22 @@
 </section>
 
 <aside id="Columna">
-    <h1 id="Texto">Aqui va algo</h1>
+    <form id="formulario2" action="proceso.php" method="POST" >
+		<table >
+		<tr>
+			<td> <label for="usuario">Usuario :</label></td>
+			<td><input type="text" id="txtusr" name="txtusr" placeholder="Usuario" autofocus></td>
+		</tr>  
+		<tr>
+			<td><label for="passwrd">Password :</label></td>
+			<td><input type="password" id="txtpwd" name="txtpwd" ></td>
+		</tr>
+		<tr>
+			<td><input type="submit" name="btn" value="Aceptar" id="btn"></td>
+		</tr>
+		</table>
+		</form>
+
 </aside>
 
 
