@@ -1,0 +1,139 @@
+ @font-face {
+    font-family: "praetorian";
+    src: url(praetorian.ttf) format("truetype");
+    }
+
+    @font-face {
+    font-family: "betterPhoenix";
+    src: url(better_phoenix_sample.otf) format("opentype");
+    }
+
+    @font-face {
+    font-family: "beyondMountains";
+    src: url(beyond_the_mountains.otf) format("opentype");
+    }
+
+    @font-face {
+    font-family: "Blacksword";
+    src: url(Blacksword.otf) format("opentype");
+    }
+
+    * {
+    margin: 0px;
+    padding: 0px;
+    }
+
+    #Cabecera {
+    padding: 30px;
+        height: 15%;
+        background-color: #B21B5E;
+        text-align: left;
+
+    }
+
+    #Menu {
+    background: #E21F5F;
+    padding: 5px 15px;
+    }
+
+    #MenuLi {
+    display: inline-block;
+    list-style: none;
+    padding: 5px;
+    font: bold 14px verdana, sans-serif;
+    }
+
+   #Seccion {
+    float: left;
+    width: 50%;
+    margin: 20px 0px;
+    padding: 20px;
+    background: #B21B5E;
+    margin-left: 20px;
+    }
+
+    #Columna {
+    float: right;
+    width: 15%;
+    margin: 20px 0px;
+    padding: 20px;
+    background: #B21B5E;
+    margin-right: 30px;
+    }
+
+    #Pie {
+    clear: both;
+    background: #B21B5E;
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #999999;
+    }
+
+    div {
+    width: 100px;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #000000;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+
+    article {
+    background: #FFFFFF;
+    border: 1px solid #999999;
+    padding: 20px;
+    margin-bottom: 15px;
+    }
+
+    article footer {
+    text-align: right;
+    }
+    
+    time {
+    color: #999999;
+    }
+
+    figcaption {
+    font: italic 14px verdana, sans-serif;
+    }
+
+    h1 {
+    font: bold 20px verdana, sans-serif;
+    }
+    
+    h2 {
+    font: bold 14px verdana, sans-serif;
+    }
+    
+    html, body { height: 100%; margin: 0; padding: 0; background-color: #2F2F2F; text-align: right;
+    }
+
+    #principal {
+    display: block;
+    width: 500px;
+    margin: 50px auto;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #999999;
+    background: #DDDDDD;
+    }
+    
+    #Titulo {
+    font: bold 36px Blacksword, verdana, sans-serif;
+    text-shadow: rgba(0, 0, 0, 0.50) 3px 3px 5px;
+    color: hsla(120, 100%, 50%, 0. 5) ;
+    opacity: .90;
+    }
+
+    #Texto{
+    font: bold 36px Blacksword, verdana, sans-serif;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.50) 3px 3px 5px;
+    color: hsla(120, 100%, 50%, 0. 5) ;
+    opacity: .90;
+    }
+
+    header, section, footer, aside, nav, article, figure,figcaption,hgroup{
+      display: block;
+    }
