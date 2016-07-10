@@ -33,14 +33,13 @@
 
     #Menu {
     background: #5D4037;
-    padding: 5px 15px;
+    padding: 1px;  
     }
 
     #MenuLi {
     display: inline-block;
     list-style: none;
-    padding: 5px;
-    font: bold 14px verdana, sans-serif;
+    font: bold 14px verdana sans-serif;
     }
 
     ul{
@@ -55,7 +54,7 @@
 
     a{
       font-family: praetorian;
-      color: #fff;
+      color: darkslategray;
       text-decoration: none;
       font-size: 12px;
       float: right;
@@ -66,6 +65,9 @@
     ul a:hover{
       background: gray;
       border-left: 3px solid darkslategray;
+      border-right: 3px solid darkseagreen;
+     
+
     }
 
    #Seccion {
