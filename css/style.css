@@ -42,6 +42,22 @@
     font: bold 14px verdana sans-serif;
     }
 
+    #Menu li a:hover {
+		background-color:#434343;
+		}
+			
+		#Menu li ul {
+		display:none;
+		position: absolute;
+    top: 202px;
+    right:10px;
+    min-width:100px;
+		}
+			
+		#Menu li:hover > ul {
+		display:block;
+    }
+
     ul{
       list-style-type: none;
       margin: 0 auto;

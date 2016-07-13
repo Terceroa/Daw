@@ -3,29 +3,8 @@
 
 <head>
  <meta charset="utf-8">
- <title>CAMBIAR(TITULO)</title>
+ <title>DAW</title>
  <link rel="stylesheet" type="text/css" href="css/style.css">
-
-<style type="text/css">
-			
-			#Menu li a:hover {
-				background-color:#434343;
-			}
-			
-			#Menu li ul {
-				display:none;
-				position: absolute;
-                top: 202px;
-                right:10px;
-                min-width:100px;
-			}
-			
-			#Menu li:hover > ul {
-				display:block;
-            }
-			
-		</style>
-
 </head>
 
 <body>
