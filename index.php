@@ -5,6 +5,27 @@
  <meta charset="utf-8">
  <title>CAMBIAR(TITULO)</title>
  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+<style type="text/css">
+			
+			#Menu li a:hover {
+				background-color:#434343;
+			}
+			
+			#Menu li ul {
+				display:none;
+				position: absolute;
+                top: 202px;
+                right:10px;
+                min-width:100px;
+			}
+			
+			#Menu li:hover > ul {
+				display:block;
+            }
+			
+		</style>
+
 </head>
 
 <body>
@@ -14,9 +35,14 @@
 
 <nav>
     <ul id="Menu">
-        <li id="MenuLi"><a href="#"> Home </a></li>
-        <li id="MenuLi"><a href="#"> Blog </a></li>
-        <li id="MenuLi"><a href="#"> Usuarios </a></li>
+        <li id="MenuLi"><a href="index.php"> Home </a></li>
+        <li id="MenuLi"><a href="#"> Blog </a>
+           <ul>
+                <li><a href="https://san10avril10.blogspot.mx">San Carrillo</a></li>
+                <li><a href="https://alanvazquezblog.wordpress.com">Alan Vázquez</a></li>
+            </ul>
+        </li>
+        <li id="MenuLi"><a href="usuarios.php"> Usuarios </a></li>
     </ul>
 </nav>
 
