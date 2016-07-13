@@ -3,7 +3,7 @@
 
 <head>
  <meta charset="utf-8">
- <title>CAMBIAR(TITULO)</title>
+ <title>Usuarios</title>
  <link rel="stylesheet" type="text/css" href="css/style.css">
 
 <style type="text/css">
