@@ -9,7 +9,7 @@
 
 <body>
 <header id="Cabecera">
-    <h1 id="Titulo">DAW</h1>
+    <h1 id="Titulo">Bienvenido</h1>
 </header>
 
 <nav>
@@ -28,7 +28,9 @@
 <section id="Seccion">
     
     <h1 id="Texto">Galeria</h1>
-    <article id="Galeriy">  
+   
+    <article id="Galeriy">
+    <!-- Aqui dentro va la galeria -->  
     </article>    
         
         <h1 id="Texto">Mapa</h1>
