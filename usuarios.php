@@ -8,22 +8,15 @@
 
 <style type="text/css">
 			
-			#Menu li a:hover {
-				background-color:#434343;
-			}
-			
-			#Menu li ul {
-				display:none;
-				position: absolute;
-                top: 202px;
-                right:10px;
-                min-width:100px;
-			}
-			
-			#Menu li:hover > ul {
-				display:block;
-            }
-			
+#SeccionA {
+    float: left;
+    width: 50%;
+    height: 60%;
+    margin: 20px 0px;
+    padding: 20px;
+    background: #F2F2F2;
+    margin-left: 30px;
+    }
 		</style>
 
 </head>
@@ -36,18 +29,56 @@
 <nav>
     <ul id="Menu">
         <li id="MenuLi"><a href="index.php"> Home </a></li>
-        <li id="MenuLi"><a href="#"> Blog </a>
-           <ul>
+        <li id="MenuLi"><a href="https://alanvazquezblog.wordpress.com"> Blog </a>
+         <!--  <ul>
                 <li><a href="https://san10avril10.blogspot.mx">San Carrillo</a></li>
                 <li><a href="https://alanvazquezblog.wordpress.com">Alan Vázquez</a></li>
-            </ul>
+            </ul> -->
         </li>
         <li id="MenuLi"><a href="usuarios.php"> Usuarios </a></li>
     </ul>
 </nav>
 
-<section id="Seccion">
-    <h1 id="Texto">Aqui la tabla de usuarios</h1>
+<section id="SeccionA">
+    <h1 id="Texto">Tabla de usuarios</h1>
+   		<article>
+		<?php 
+			require_once 'control/usuarios.php';
+			$clsUsuarios = new usuarios();
+		 	$dsUsuarios= $clsUsuarios->getUsers();
+			$tablausuarios="<table id='listaUsuarios'>";
+        	$tablausuarios=$tablausuarios."<thead>";
+            $tablausuarios=$tablausuarios."<tr>";
+			$tablausuarios=$tablausuarios."<th>SEL</th>";
+            $tablausuarios=$tablausuarios."<th>ID</th>";
+            $tablausuarios=$tablausuarios."<th>USUARIO</th>";
+            $tablausuarios=$tablausuarios."</tr>";			
+			$tablausuarios=$tablausuarios."</thead>";		
+			$tablausuarios=$tablausuarios."<tbody>";			
+			if(sizeof($dsUsuarios) > 0) {
+				foreach ($dsUsuarios as $usuario) {
+					$tablausuarios=$tablausuarios."<tr>";
+					$tablausuarios=$tablausuarios."<td><input type='checkbox' name='seleccionar' id='".$usuario->getId()."'/></td>";
+					$tablausuarios=$tablausuarios."<td>".$usuario->getId().'</td>';
+					$tablausuarios=$tablausuarios."<td>".$usuario->getUsername().'</td>';
+					$tablausuarios=$tablausuarios."</tr>";			
+				}
+    		}else{ 
+					$tablausuarios=$tablausuarios."<tr>";			
+					$tablausuarios=$tablausuarios."<td>No existen Usuarios</td>";
+				    $tablausuarios=$tablausuarios."</tr>";			
+			}
+			$tablausuarios=$tablausuarios."</tbody>";
+			$tablausuarios=$tablausuarios."</table>";
+		?>
+		     
+		
+             <button id="btnBorrar">Eliminar Registro</button>
+			
+			<?php echo $tablausuarios; ?>
+		</article>
+		
+		
 </section>
 
 <aside id="Columna">
@@ -86,12 +117,35 @@ $(document).ready(function(){
 				// show response from the php script.	
 			}
           }
-     });
+       });
 	});
+	
+	$("#btnBorrar").click(function (event) {
+		$("input:checkbox[name=seleccionar]:checked").each(function() {
+          var parametros = {
+          		"ID": $(this).attr("id")
+		  	  };
+			
+		  $.ajax({
+	      url: "borrar.php", 
+          type: "POST",
+          //datos del formulario
+          data: parametros,
+          //una vez finalizado correctamente
+          success: function (response) {
+               location.reload();
+		  },
+          error: function (response) {
+               alert(response);
+		  },
+		  });
+
+    	});
+		//window.location.href = path + 'xls/articulosCica2016.xlsx';
+     });
 });
 
 </script>
 
 </body>
-
 </html>

@@ -29,13 +29,13 @@ class usuarios {
     
     // Retrieves the corresponding row for the specified user ID.
     public function getByUserId($userId) {
-        $sql = "SELECT * FROM users WHERE id=".$userId;
+        $sql = "SELECT * FROM tblusuarios WHERE usrid=".$userId;
         return $this->execute($sql);
     }
     
     // Retrieves all users currently in the database.
     public function getUsers() {
-        $sql = "SELECT * FROM tblusuarios ORDER By usrnombre asc";
+        $sql = "SELECT * FROM tblusuarios ORDER BY usrnombre asc";
         return $this->execute($sql);
     }
     
@@ -55,16 +55,16 @@ class usuarios {
         // If the query returned a row then update,
         // otherwise insert a new user.
         if(sizeof($currUserVO) > 0) {
-            $sql = "UPDATE users SET ".
-                "username='".$userVO->getUsername()."', ".
-                "password='".$userVO->getPassword()."' ".
-                "WHERE id=".$userVO->getId();
+            $sql = "UPDATE tblusuarios SET ".
+                "usrnombre='".$userVO->getUsername()."', ".
+                "usrpass='".$userVO->getPassword()."' ".
+                "WHERE usrid=".$userVO->getId();
             
             mysql_query($sql, $this->connect) or die(mysql_error());
             $affectedRows = mysql_affected_rows();
         }
         else {
-            $sql = "INSERT INTO users (username, password) VALUES('".
+            $sql = "INSERT INTO tblusuarios (usrnombre, usrpass) VALUES ('".
                 $userVO->getUsername()."', ".
                 $userVO->getPassword()."')".
             
@@ -85,7 +85,7 @@ class usuarios {
         
         // Otherwise delete a user.
         if(sizeof($currUserVO) > 0) {
-            $sql = "DELETE FROM users WHERE id=".$userVO->getId();
+            $sql = "DELETE FROM tblusuarios WHERE usrid=".$userVO->getId();
             
             mysql_query($sql, $this->connect) or die(mysql_error());
             $affectedRows = mysql_affected_rows();

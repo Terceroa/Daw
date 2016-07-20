@@ -25,11 +25,34 @@
 
     #Cabecera {
     padding: 30px;
-    height: 15%;
     background-color: #795548;
-    text-align: left;
-
+    height: 45%;
+    /*background-image: url(images/mountains.jpg);*/
+    background-size: 100% 100%;
+    animation: Cabecera 20s infinite;
+    animation-direction: alternate;
     }
+
+
+    @keyframes Cabecera{
+    0%, 35%{
+        background-image: url(images/maxresdefault.jpg);
+        opacity: 1;
+    }
+    40%, 65%{
+        background-image: url(images/diseno-web-paginas-web-desarrollo-responsive.png);
+        opacity: 1;
+    }
+    66%, 69%{
+        opacity: 1;
+    }
+
+    70%,100%{
+        opacity: 1;
+        background-image: url(images/alertas-google-diseño-responsive-Teresa-Alba-MadridNYC.png);
+    }
+}
+
 
     #Menu {
     background: #5D4037;
@@ -49,7 +72,7 @@
 		#Menu li ul {
 		display:none;
 		position: absolute;
-    top: 202px;
+    top: 195px;
     right:10px;
     min-width:100px;
 		}
@@ -90,11 +113,28 @@
    #Seccion {
     float: left;
     width: 50%;
+    height: 165%;
     margin: 20px 0px;
     padding: 20px;
     background: #F2F2F2;
     margin-left: 30px;
     }
+
+    #Galeriy { 
+        height: 40%;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 1%;
+        margin-top: 1%;
+      }
+
+    #map { 
+        height: 40%;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 1%;
+        margin-top: 1%;
+      }
 
     #Columna {
     float: right;
@@ -182,6 +222,16 @@
       display: block;
     }
 
+    #btnBorrar{
+      background-color: #9ccc65;
+      width: 25%;
+      height: 28px;
+      border: none;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: #FFFFFF;
+    
+    }
 
     input{
       width: 100%;
